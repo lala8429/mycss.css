@@ -1,0 +1,99 @@
+/* -------- BASIC STYLES -------- */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #ffffff; color: #333; }
+ p{font-size:large;line-height:1.7;text-align: justify;}
+body a { color: #0059b3; text-decoration: none; }
+body a:hover { color: #b30059; text-decoration: underline; /* Optional: Underline on hover */ }
+
+.container { width: 100%; max-width: 1300px; margin: 0 auto; display: flex; flex-direction: row; padding-top: 70px; overflow: hidden; box-sizing: border-box; }
+
+/* -------- HEADER WITH LOGO -------- */
+.header-wrapper { position: fixed; top: 0; width: 100%; height: 60px; background: #2d68c4; display: flex; align-items: center; justify-content: center; padding: 0 10px; z-index: 1000; }
+.header-wrapper img { height: 50px; width: auto; max-width: 150px; }
+.header-title { color: #fff; font-size: 20px; font-weight: bold; margin-left: 10px; }
+
+/* -------- MAIN CONTENT (BLOG POSTS) -------- */
+.main-content { flex: 3; background: #fff; padding:10px; margin-top:30px;border-radius: 5px; }
+.post-title.entry-title {font-size:30px;line-height:1.5;}
+
+
+/* -------- RIGHT SIDEBAR (FLOATING) -------- */
+.sidebar-wrapper { border: 2px solid #ddd; flex: 1; position: sticky; top: 60px; background: #ffffff; padding: 0px; border-radius: 0px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); max-height: 80vh; overflow-y: auto; min-width: 250px; display: block; }
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Side bar niche aa jayega */
+  }
+  
+  .main-content {
+    margin-top: 70px; /* Thoda space upar */
+  }
+
+  .sidebar-wrapper {
+	width:95%;
+	padding-left:7px;
+    position: relative; /* Sticky hata do mobile me */
+    top: auto;
+    max-height: none; /* Full height le sake */
+    margin-top: 20px; /* Main content ke baad space */
+  }
+}
+
+/* --------- QUICK LINKS SECTION -------- */
+.quick-link-box{width:97%;background:#fff;border:1px solid #e0e0e0;box-shadow:0 5px 15px rgba(0,0,0,0.08);border-radius:8px;margin:10px;padding:0px;box-sizing:border-box}
+.quick-link-box h2{padding-left:15px;font-size:24px;color:#333;margin-bottom:10px}
+.section-line{width:50px;height:3px;background:#b30059;border:none;border-radius:3px;margin-left:15px;margin-bottom:20px}
+.quick-link-wrapper{display:flex;flex-wrap:wrap;color:#333}
+.quick-links-section{width:100%;margin:0;padding:0 0 10px 15px;flex:1 1 calc(25% - 20px);background:#fafafa;border-radius:6px;margin-bottom:15px;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform 0.3s ease,box-shadow 0.3s ease}
+.quick-links-section:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.12)}
+.quick-links-section h3{font-size:20px;margin-bottom:15px;color:#b30059;margin-right:15px;border-bottom:2px solid #ddd;padding-bottom:8px}
+.quick-links-section ul{list-style:none;padding-left:10px;margin:0}
+.quick-links-section ul li{margin-bottom:10px}
+.quick-links-section ul li a{color:#333;text-decoration:none;font-size:14px;padding:6px 10px;display:block;border-radius:4px;transition:all 0.3s ease}
+.quick-links-section ul li a:hover{background:#b30059;color:#fff;text-decoration:none}
+@media(max-width:768px){.quick-link-box{width:95%}.quick-links-section{flex:1 1 40%}}
+ 
+/* -------- FOOTER -------- */
+/* Footer Area */
+footer{background:#34444b;color:#fff;padding:60px 0;font-family:Arial,sans-serif}
+.footer-container{max-width:1140px;margin:0 auto;padding:0 15px}
+.footer-content{text-align:center}
+.footer-content img{max-width:210px}
+.footer-content p{font-size:15px;margin:30px 0}
+.footer-line{border:none;height:1px;background-color:#353C46;width:80%;margin:30px auto}
+.footer-content h6{color:#8b9199;font-size:15px;font-weight:400;margin-bottom:10px}
+.footer-content span{color:#353c47;margin:0 10px}
+.footer-social{margin-top:30px}
+.footer-social ul{display:inline-flex;margin:0;padding:0;list-style:none}
+.footer-social ul li{margin:0 5px}
+.footer-social ul li a{border:1px solid #8b9199;color:#8b9199;display:inline-block;height:40px;width:40px;text-align:center;line-height:40px;border-radius:50%;transition:.4s ease}
+.footer-social ul li a:hover{border-color:#FAB702;color:#FAB702}
+/* Footer Links - PC and Mobile */
+.footer-links{margin:40px 0 20px;text-align:center}
+.footer-links ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;justify-content:center}
+.footer-links ul li{margin:0 15px}
+.footer-links ul li a{color:#868c96;text-decoration:none;font-size:14px;transition:color .3s}
+.footer-links ul li a:hover{color:#FAB702}
+/* Copyright Section */
+.footer-bottom{text-align:center;padding:20px 0 0;display:flex;justify-content:center;align-items:center;flex-direction:column}
+.footer-bottom p{font-size:14px;color:#868c96;margin:0;text-align:center}
+.footer-bottom img{width:44px;vertical-align:middle;margin:0 5px}
+@media(max-width:768px){
+  .footer-links ul li{margin:10px}
+  .footer-social ul{flex-wrap:wrap;justify-content:center}
+  .footer-social ul li{margin:5px}
+}
+
+/* ===== Widgets CSS (Sticky Widget) ===== */
+/* Sidebar Widget Styles */
+/* Individual Block (Card) */
+.widget-box{background:#fff;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+/* Widget-box Title */
+.widget-box h2{padding:5px 0;margin:0;background:#a3297a;color:#fff;text-align:center}
+/* List Items (Inside Block) */
+.widget-box ul{list-style:none;padding:4px 0;margin:0}
+/* List Item */
+.widget-box ul li{padding:10px;border-bottom:1px solid #ddd}
+/* Last Item Border Remove */
+.widget-box ul li:last-child{border-bottom:none}
